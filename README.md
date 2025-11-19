@@ -15,7 +15,7 @@ https://github.com/Gladrat
   - Charger le modèle en mémoire : `curl "http://localhost:11434/api/generate" -d '{"model": "gemma3:4b", "keep_alive": -1}'`
   - Tester un prompt : `curl "http://localhost:11434/api/generate" -d '{"model": "gemma3:4b", "prompt": "Dis bonjour en 3 langues différentes", "stream": false}'`
   
-Pour les galères de Powershell :
+Pour les galères de Powershell (les vieilles versions) :
 
 ```ps
 Invoke-RestMethod `
@@ -23,6 +23,14 @@ Invoke-RestMethod `
   -Method Post `
   -ContentType "application/json" `
   -Body '{"model": "gemma3:4b", "keep_alive": -1}'
+```
+
+```ps
+Invoke-RestMethod `
+  -Uri "http://localhost:11434/api/generate" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body '{"model": "gemma3:4b", "prompt": "Dis bonjour en 3 langues", "stream": false}'
 ```
 
 # Projet n°1 : Veille automatisée
