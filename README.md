@@ -5,6 +5,7 @@ https://github.com/Gladrat
 
 # Environnement
 
+- Installer Powershell 7.5 : [https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi](https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi)
 - Installer n8n : `npm install -g n8n`
   - Lancer n8n : `n8n`
 - Installer Ollama
