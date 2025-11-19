@@ -27,7 +27,9 @@ Invoke-RestMethod `
 
 # Projet n°1 : Veille automatisée
 
-- Scraper : [https://tldr.tech/dev/2025-11-18](https://tldr.tech/dev/2025-11-18)
+- Scraper (DEV+IA) : [https://tldr.tech/dev/2025-11-18](https://tldr.tech/dev/2025-11-18)
+- Scraper (INFRA+CYBER) : [https://tldr.tech/infosec/2025-11-18](https://tldr.tech/infosec/2025-11-18)
+- Vous devez récupérer :
   - Titre
   - Description
   - URL
