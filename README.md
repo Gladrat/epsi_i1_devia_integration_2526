@@ -12,3 +12,4 @@ https://github.com/Gladrat
   - Pull un modèle : `ollama pull gemma3:4b`
   - Lancer le serveur d'API Ollama : `ollama serve`
   - Charger le modèle en mémoire : `curl http://localhost:11434/api/generate -d '{"model": "gemma3:4b", "keep_alive": -1}'`
+  - Tester un prompt : `curl http://localhost:11434/api/generate -d '{"model": "gemma3:4b", "prompt": "Dis bonjour en 3 langues différentes", "stream": false}'`
