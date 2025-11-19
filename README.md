@@ -14,3 +14,14 @@ https://github.com/Gladrat
   - Lancer le serveur d'API Ollama : `ollama serve`
   - Charger le modèle en mémoire : `curl "http://localhost:11434/api/generate" -d '{"model": "gemma3:4b", "keep_alive": -1}'`
   - Tester un prompt : `curl "http://localhost:11434/api/generate" -d '{"model": "gemma3:4b", "prompt": "Dis bonjour en 3 langues différentes", "stream": false}'`
+  
+# Projet n°1 : Veille automatisée
+
+- Scraper : [https://tldr.tech/dev/2025-11-18](https://tldr.tech/dev/2025-11-18)
+  - Titre
+  - Description
+  - URL
+  - (Durée)
+- Synthèse de la description par IA
+- Catégorisation de l'article par IA
+- Chargement dans Notion
