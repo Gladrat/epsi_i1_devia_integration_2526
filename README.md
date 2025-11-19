@@ -33,7 +33,7 @@ Invoke-RestMethod `
   - Titre
   - Description
   - URL
-  - (Durée)
+  - Durée (Facultatif)
 - Synthèse de la description par IA
 - Catégorisation de l'article par IA
 - Chargement dans Notion
