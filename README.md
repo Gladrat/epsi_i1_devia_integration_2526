@@ -46,3 +46,9 @@ Invoke-RestMethod `
 - Synthèse de la description par IA
 - Catégorisation de l'article par IA
 - Chargement dans Notion
+
+## Prompt de résumé
+
+```text
+Write a single abstract (maximum 10 words) summarizing the following topic. Output only the abstract, no explanations, no alternatives, no formatting:
+```
