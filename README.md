@@ -8,6 +8,7 @@ https://github.com/Gladrat
 - Installer Powershell 7.5 : [https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi](https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi)
 - Installer n8n : `npm install -g n8n`
   - Lancer n8n : `n8n`
+- Mettre à jour n8n : `npm update -g n8n`
 - Installer Ollama
   - Fermer le client (desktop) Ollama
   - Pull un modèle : `ollama pull gemma3:4b`
