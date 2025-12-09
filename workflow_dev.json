@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a1e81c77-b92b-4591-8038-7810e1d7afee",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://tldr.tech/dev/2025-11-18",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        224,
+        0
+      ],
+      "id": "52cae49b-4738-4b45-aa51-04a45351b096",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "article_title",
+              "cssSelector": "article h3",
+              "returnArray": true
+            },
+            {
+              "key": "article_description",
+              "cssSelector": "article div",
+              "returnArray": true
+            },
+            {
+              "key": "article_link",
+              "cssSelector": "article>a",
+              "returnValue": "attribute",
+              "attribute": "href",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        432,
+        0
+      ],
+      "id": "372c185c-97ec-4b76-8bc5-0e16fe5a2803",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "article_title, article_description, article_link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        640,
+        0
+      ],
+      "id": "6d2e0f89-d7ae-4cfb-9913-1debd4ca96f1",
+      "name": "Split Out"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e068b9d8db735a64fdb7d3422123e7640d678cebcd25cff1dfacad620bda570d"
+  }
+}
